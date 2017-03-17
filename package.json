@@ -1,0 +1,30 @@
+{
+  "name": "reloadable-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "node_modules/babel-cli/bin/babel.js src -d lib",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "express": "4.x",
+    "chokidar": "1.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jzimmek/reloadable.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jzimmek/reloadable/issues"
+  },
+  "homepage": "https://github.com/jzimmek/reloadable#readme"
+}
