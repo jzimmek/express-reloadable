@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jzimmek/reloadable.git"
+    "url": "git+https://github.com/jzimmek/express-reloadable.git"
   },
-  "author": "",
+  "author": "Jan Zimmek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jzimmek/reloadable/issues"
+    "url": "https://github.com/jzimmek/express-reloadable/issues"
   },
-  "homepage": "https://github.com/jzimmek/reloadable#readme"
+  "homepage": "https://github.com/jzimmek/express-reloadable#readme"
 }
