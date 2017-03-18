@@ -2,6 +2,10 @@ import express from "express"
 import chokidar from "chokidar"
 
 export default (app,{requireFile,watch,clearIf,watchOpts}) => {
+
+  if(!clearIf)
+    clearIf = (file) => file.indexOf("node_modules") === -1
+
   let router = express.Router(),
       {default: fn, tearDown} = require(requireFile)
 

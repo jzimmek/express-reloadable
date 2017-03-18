@@ -59,6 +59,10 @@ etag@~1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.0.tgz#6f631aef336d6c46362b51764044ce216be3c051"
 
+express-reloadable@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/express-reloadable/-/express-reloadable-1.0.3.tgz#dbb666e7fe9731f9eb48033091c8b398eb9f392c"
+
 express@^4.15.2:
   version "4.15.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.2.tgz#af107fc148504457f2dca9a6f2571d7129b97b35"
@@ -191,10 +195,6 @@ qs@6.4.0:
 range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
-
-reloadable-middleware@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/reloadable-middleware/-/reloadable-middleware-1.0.1.tgz#10f3a27e30487bbe4e4407bf3270c758f45b3450"
 
 send@0.15.1:
   version "0.15.1"
