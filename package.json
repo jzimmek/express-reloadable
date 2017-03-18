@@ -1,7 +1,7 @@
 {
-  "name": "reloadable-middleware",
+  "name": "express-reloadable",
   "version": "1.0.1",
-  "description": "",
+  "description": "Make your express application reloadable without server restart.",
   "main": "./lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",

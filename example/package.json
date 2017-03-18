@@ -1,0 +1,9 @@
+{
+  "name": "express-reloadable-example",
+  "version": "1.0.0",
+  "main": "./src/server.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-reloadable": "^1.0.1"
+  }
+}
