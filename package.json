@@ -1,8 +1,18 @@
 {
   "name": "express-reloadable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Make your express application reloadable without server restart.",
   "main": "./lib/index.js",
+  "keywords": [
+    "express",
+    "expressjs",
+    "reload",
+    "reloading",
+    "hot-reload",
+    "hmr",
+    "webpack",
+    "webpack-dev-server"
+  ],
   "scripts": {
     "clean": "rm -rf lib",
     "build": "node_modules/babel-cli/bin/babel.js src -d lib",
