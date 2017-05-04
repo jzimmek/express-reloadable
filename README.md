@@ -12,7 +12,7 @@ We leverage the existing router feature of express and wire it together with the
 # Installation
 
 ```
-npm install express-reloadable
+npm install express-reloadable chokidar
 ```
 
 # Getting started
