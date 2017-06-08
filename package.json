@@ -1,6 +1,6 @@
 {
   "name": "express-reloadable",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Make your express application reloadable without server restart.",
   "main": "./lib/index.js",
   "keywords": [
@@ -13,14 +13,17 @@
     "webpack",
     "webpack-dev-server"
   ],
+  "files": [
+    "lib/index.js"
+  ],
   "scripts": {
     "clean": "rm -rf lib",
     "build": "node_modules/babel-cli/bin/babel.js src -d lib",
     "prepublish": "npm run clean && npm run build"
   },
   "peerDependencies": {
-    "express": "4.x",
-    "chokidar": "1.x"
+    "chokidar": "1.x",
+    "express": "4.x"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
