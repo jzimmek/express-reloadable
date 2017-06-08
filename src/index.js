@@ -18,19 +18,23 @@ export default (app,{requireFile,watch,clearIf,watchOpts}) => {
     },
     ...watchOpts
   }).on("all", () => {
-    if(tearDown)
-      tearDown()
+    Promise
+      .resolve(tearDown ? tearDown() : null)
+      .then(() => {
+        Object.keys(require.cache).forEach(function(key){
+          if(clearIf(key))
+          delete require.cache[key]
+        })
 
-    Object.keys(require.cache).forEach(function(key){
-      if(clearIf(key))
-        delete require.cache[key]
-    })
+        let {default: nextFn, tearDown: nextTearDown} = require(requireFile)
 
-    let {default: nextFn, tearDown: nextTearDown} = require(requireFile)
-
-    router = express.Router()
-    nextFn(router)
-    tearDown = nextTearDown
+        router = express.Router()
+        nextFn(router)
+        tearDown = nextTearDown
+      })
+      .catch((err) => {
+        console.error("ERR", err)
+      })
   })
 
   app.use("/", (req,res,next) => {
