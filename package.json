@@ -1,6 +1,6 @@
 {
   "name": "express-reloadable",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Make your express application reloadable without server restart.",
   "main": "./lib/index.js",
   "keywords": [
