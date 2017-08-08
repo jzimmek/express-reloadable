@@ -16,6 +16,7 @@ export default (app,{requireFile,watch,clearIf,watchOpts}) => {
       stabilityThreshold: 500,
       pollInterval: 100,
     },
+    ignoreInitial: true,
     ...watchOpts
   }).on("all", () => {
     Promise
