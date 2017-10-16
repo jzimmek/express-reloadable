@@ -1,7 +1,7 @@
 import express from "express"
 import chokidar from "chokidar"
 
-export default (app,{requireFile,watch,clearIf,watchOpts}) => {
+export default (app,{requireFile,watch,clearIf,watchOpts,args=[]}) => {
 
   if(!clearIf)
     clearIf = (file) => file.indexOf("node_modules") === -1
@@ -9,7 +9,7 @@ export default (app,{requireFile,watch,clearIf,watchOpts}) => {
   let router = express.Router(),
       {default: fn, tearDown} = require(requireFile)
 
-  fn(router)
+  fn.apply(null, [router, ...args])
 
   chokidar.watch(watch, {
     awaitWriteFinish: {
@@ -30,7 +30,7 @@ export default (app,{requireFile,watch,clearIf,watchOpts}) => {
         let {default: nextFn, tearDown: nextTearDown} = require(requireFile)
 
         router = express.Router()
-        nextFn(router)
+        nextFn.apply(null, [router, ...args])
         tearDown = nextTearDown
       })
       .catch((err) => {
