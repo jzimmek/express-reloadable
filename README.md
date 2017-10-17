@@ -61,6 +61,7 @@ See the [example](https://github.com/jzimmek/express-reloadable/tree/master/exam
 |requireFile|n/a|The file to (re-)require on reload|
 |watch|n/a|Paths to files, dirs to be watched recursively, or glob patterns. See https://github.com/paulmillr/chokidar#api for details.|
 |clearIf|(file) => file.indexOf("node_modules") === -1|A reload is only triggered if this functions returns a truthy value.|
+|args|[]|Additional arguments which will be passed to the function exported by requireFile|
 
 
 # How to release allocated resources on reload?
